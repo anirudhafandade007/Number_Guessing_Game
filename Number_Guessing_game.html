@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Number Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 10px;
+            padding: 0px;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        p,
+        h2 {
+            text-align: center;
+
+        }
+
+        #guess {
+            width: 250px;
+            border-radius: 5px;
+            position: absolute;
+            left: 42%;
+            top: 130px;
+            text-align: center;
+        }
+
+        #btn {
+            position: absolute;
+            left: 47%;
+            top: 165px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <div class="container1">
+        <h2 class="mb-4 mt-4 center">Number Guessing Game</h2>
+        <p>What is number, I hold up ?</p>
+        <input type="text" class="form-control" id="guess"><br>
+        <button id="btn" class="btn btn-success mt-3">Enter</button>
+    </div>
+
+    <div class="container fixed-bottom">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                </a>
+                <span class="mb-3 mb-md-0" style="font-weight:bold;">© Copyright,Anirudha007</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="https://twitter.com" target="_blank"><img src="twit.png"
+                            style="filter: invert(100%);" class="bi" width="30" height="24" alt=""></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://facebook.com" target="_blank"><img src="fb.png"
+                            style="filter: invert(100%);" class="bi" width="30" height="24" alt=""></a></li>
+                <li class="ms-3"><a class="text-muted" href="https://instagram.com" target="_blank"><img src="insta.png"
+                            style="filter: invert(100%);" class="bi" width="30" height="24" alt=""></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            var randomNumber = Math.floor(Math.random() * 6);
+            if (document.getElementById("guess").value == randomNumber) {
+                alert("You guess correctly !!!");
+            }
+            else {
+                alert("Nope, correct number was " + randomNumber);
+            }
+        }
+    </script>
+</body>
+
+</html>
